@@ -1,0 +1,29 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: mahabharata_pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mahabharata
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d mahabharata"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # Optional: local LLM runtime. Set OLLAMA_* / use GENERATOR=llm + a provider
+  # of your choice if you prefer a hosted model.
+  # api:
+  #   build: ./backend
+  #   env_file: .env
+  #   ports: ["8000:8000"]
+  #   depends_on: [db]
+
+volumes:
+  pgdata:

@@ -1,0 +1,39 @@
+{
+  "title": "Saarathi AI — curated active corpus",
+  "primary_work": "The Mahabharata attributed to Maharishi Veda Vyasa",
+  "edition": "Curated active corpus; see STATUS.md and repository PROVENANCE.md",
+  "created": "2026-10-01",
+  "provenance_policy": {
+    "accepted": [
+      "The Mahabharata (Sanskrit), in any recognised edition of the 18 parvas",
+      "Public-domain English translations of the above (e.g. M. N. Dutt, K. M. Ganguli)",
+      "Recognised critical/scholarly editions and their apparatus"
+    ],
+    "rejected": [
+      "Television serials and their dialogue",
+      "Amar Chitra Katha and illustrated retellings",
+      "Modern novels and modern retellings",
+      "YouTube explanations, social-media posts, Quora answers",
+      "Fan fiction and adaptations that alter characters or events",
+      "Popular motivational interpretations presented as source"
+    ]
+  },
+  "verification_status_meaning": {
+    "verified": "The identity of the episode and its location in the 18-parva division has been confirmed. `text_type: summary` content is an EDITORIAL SUMMARY and must never be displayed as a quotation. `text_type: verse|prose` content carries `translation` wording that is a conventional rendering, not a scholarly translation.",
+    "unverified": "The theme is attested but the exact location needs confirmation against the chosen edition. These passages may be shown but cannot support a 'strong textual support' claim.",
+    "rejected": "Content that does not meet the provenance policy, or that was found to be wrong. Never returned by retrieval."
+  },
+  "fields": [
+    "parva", "section", "chapter", "verse_range", "speaker", "listener",
+    "characters", "events", "themes", "keywords", "original_text",
+    "translation", "summary", "text_type", "source_reference",
+    "is_primary_text", "verification_status", "verification_note"
+  ],
+  "files": [
+    "01_adi_sabha.json",
+    "02_vana_virata.json",
+    "03_udyoga_bhishma.json",
+    "04_drona_karna_war.json",
+    "05_stri_shanti_prasthanika.json"
+  ]
+}
